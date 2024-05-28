@@ -4,8 +4,8 @@ Resource    ../utils/config.robot
 Resource    ../utils/commons.robot
 
 *** Variables ***
-${INDICACAO_SCREEN}          xpath=//android.widget.ImageView[@content-desc="Resgate seus amigos da fila do banco\nPara cada indicação aceita, um amigo salvo da burocracia"]
-${INDICAR_BUTTON}            xpath=//android.widget.Button[@content-desc="INDICAR AMIGOS"]
+${INDICACAO_SCREEN}                xpath=//android.widget.ImageView[@content-desc="Resgate seus amigos da fila do banco\nPara cada indicação aceita, um amigo salvo da burocracia"]
+${INDICAR_BUTTON}                  xpath=//android.widget.Button[@content-desc="INDICAR AMIGOS"]
 
 *** Keywords ***
 Então verifico as informações para indicação de amigos
