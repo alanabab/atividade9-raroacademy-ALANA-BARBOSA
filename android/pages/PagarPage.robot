@@ -13,10 +13,10 @@ ${PAGAR_EXIT}                  xpath=//android.widget.Button
 *** Keywords ***
 Então verifico as informações da função Pagar
     Wait Until Page Contains Element    ${PAGAR_SCREEN}
-    Verifica se os elementos estão visíveis e habilitados    ${PAGAR_PIX}    ${PAGAR_FATURA}    ${PAGAR_BOLETO}    ${PAGAR_EXIT}
-    Element Should Contain Text    ${PAGAR_PIX}    Pagar com Pix Leia um QR Code ou cole o código.
-    Element Should Contain Text    ${PAGAR_FATURA}    Pagar fatura do cartão Libera o limite do seu Cartão de Crédito.
-    Element Should Contain Text    ${PAGAR_BOLETO}    Pagar um boleto Contas de luz, água, etc.
+    Verifica se os elementos estão habilitados    ${PAGAR_PIX}    ${PAGAR_FATURA}    ${PAGAR_BOLETO}    ${PAGAR_EXIT}
+    Verifica visibilidade e texto    ${PAGAR_PIX}    Pagar com Pix\nLeia um QR Code ou cole o código.
+    Verifica visibilidade e texto    ${PAGAR_FATURA}    Pagar fatura do cartão\nLibera o limite do seu Cartão de Crédito.
+    Verifica visibilidade e texto    ${PAGAR_BOLETO}    Pagar um boleto\nContas de luz, água, etc.
 
 E retorno da tela pagar para a tela inicial clicando em X
     Click Element    ${PAGAR_EXIT}

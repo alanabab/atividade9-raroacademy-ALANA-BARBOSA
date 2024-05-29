@@ -15,11 +15,11 @@ ${DEPOSITAR_EXIT}                   xpath=//android.widget.Button
 Então verifico as informações da função Depositar
     Wait Until Page Contains Element    ${DEPOSITAR_SCREEN}
     Verifica se os elementos estão visíveis e habilitados    ${DEPOSITAR_SCREEN}    ${DEPOSITAR_PIX}    ${DEPOSITAR_BOLETO}    ${DEPOSITAR_TED_DOC}    ${DEPOSITAR_SALARIO}
-    Element Should Contain Text    ${DEPOSITAR_SCREEN}    Como você quer depositar na sua conta do Nubank
-    Element Should Contain Text    ${DEPOSITAR_PIX}    Pix\nSem custo e cai na hora, mesmo de madrugada e fim de semana.
-    Element Should Contain Text    ${DEPOSITAR_BOLETO}    Boleto\nSem custo e pode levar 3 dias úteis para o dinheiro cair.
-    Element Should Contain Text    ${DEPOSITAR_TED_DOC}    TED/DOC\nPode ter custo e cai somente em horário comercial de dias úteis.
-    Element Should Contain Text    ${DEPOSITAR_EXIT}     Trazer seu salário\nReceba todo mês direto aqui na sua conta, sem custo.
+    Verifica texto de atributo do elemento    ${DEPOSITAR_SCREEN}    content-desc    Como você quer depositar na sua conta do Nubank
+    Verifica texto de atributo do elemento    ${DEPOSITAR_PIX}    content-desc    Pix\nSem custo e cai na hora, mesmo de madrugada e fim de semana.
+    Verifica texto de atributo do elemento    ${DEPOSITAR_BOLETO}    content-desc    Boleto\nSem custo e pode levar 3 dias úteis para o dinheiro cair.
+    Verifica texto de atributo do elemento    ${DEPOSITAR_TED_DOC}    content-desc    TED/DOC\nPode ter custo e cai somente em horário comercial de dias úteis.
+    Verifica texto de atributo do elemento    ${DEPOSITAR_EXIT}    content-desc     Trazer seu salário\nReceba todo mês direto aqui na sua conta, sem custo.
 
 E retorno da tela depositar para a tela inicial clicando em X
     Click Element    ${DEPOSITAR_EXIT}

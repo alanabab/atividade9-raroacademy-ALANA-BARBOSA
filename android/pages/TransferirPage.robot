@@ -12,7 +12,7 @@ ${TRANSFERIR_EXIT}                  xpath=//android.widget.EditText[@text="R$ 0,
 Então verifico as informações da função Transferir
     Wait Until Page Contains Element    ${TRANSFERIR_SCREEN}
     Verifica se os elementos estão visíveis e habilitados    ${TRANSFERIR_SCREEN}    ${TRANSFERIR_QRCODE}    ${TRANSFERIR_EXIT}
-    Element Should Contain Text    ${TRANSFERIR_SCREEN}    Qual é o valor da transferência?\nSaldo disponível em conta R$ 181,79
+    Verifica texto de atributo do elemento    ${TRANSFERIR_SCREEN}    hint    Qual é o valor da transferência?\nSaldo disponível em conta R$ 181,79
     Element Should Contain Text    ${TRANSFERIR_SCREEN}    R$ 0,00
 
 E retorno da tela transferir para a tela inicial clicando em X
