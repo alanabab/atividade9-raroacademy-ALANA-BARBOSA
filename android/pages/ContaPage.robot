@@ -16,7 +16,7 @@ ${CONTA_DEPOSITAR}                   xpath=//android.widget.HorizontalScrollView
 ${CONTA_PAGAR}                       xpath=//android.widget.HorizontalScrollView/android.widget.Button[2]
 ${CONTA_TRANSFERIR}                  xpath=//android.widget.HorizontalScrollView/android.widget.Button[3]
 ${CONTA_EMPRESTIMOS}                 xpath=//android.widget.HorizontalScrollView/android.widget.Button[4]
-${CONTA_DEPOSITAR}                   xpath=//android.widget.HorizontalScrollView/android.widget.Button[5]
+${CONTA_COBRAR}                   xpath=//android.widget.HorizontalScrollView/android.widget.Button[5]
 
 #HISTÓRICO DE TRANSAÇÕES
 ${CONTA_HISTORICO}                 xpath=//android.view.View[@content-desc="Histórico"]
@@ -53,3 +53,20 @@ E retorno da tela conta para a tela inicial clicando em <
 E clico no botão Depositar
     Page Should Contain Text    Depositar
     Click Element    ${CONTA_DEPOSITAR}
+
+E clico no botão Pagar
+    Page Should Contain Text    Pagar
+    Click Element    ${CONTA_PAGAR}
+
+E clico no botão Transferir
+    Page Should Contain Text    Transferir
+    Click Element    ${CONTA_TRANSFERIR}
+
+E clico no botão Empréstimos
+    Page Should Contain Text    Empréstimos
+    Click Element    ${CONTA_EMPRESTIMOS}
+
+E clico no botão Cobrar
+    Swipe By Percent    80    60    70    50
+    Page Should Contain Text    Cobrar
+    Click Element    ${CONTA_COBRAR}

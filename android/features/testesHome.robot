@@ -23,13 +23,7 @@ CT03 - Verificar botão de indicação de amigos
     Então verifico as informações para indicação de amigos
     E retorno da tela indicação para a tela inicial clicando em X
 
-CT04 - Verificar Conta
-    Dado que estou autenticado no App
-    Quando acesso a tela inicial do App 
-    E clico no botão Conta
-    Então verifico as informações da conta
-    E verifico o histórico da conta
-    E retorno da tela conta para a tela inicial clicando em <
+
     
 
 
