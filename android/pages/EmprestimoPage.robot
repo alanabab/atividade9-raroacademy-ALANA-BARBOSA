@@ -16,7 +16,7 @@ ${EMPRESTIMO_VOLTAR}                xpath=//android.widget.FrameLayout[@resource
 *** Keywords ***
 Então verifico as informações da função Empréstimos
     Wait Until Page Contains Element    ${EMPRESTIMO_SCREEN}
-    Verifica se os elementos estão visíveis e habilitados    ${EMPRESTIMO_SCREEN}    ${EMPRESTIMO_TEXT1}    ${EMPRESTIMO_TEXT2}    ${EMPRESTIMO_TEXT3}    ${EMPRESTIMO_TEXT5} ${EMPRESTIMO_VOLTAR}    ${EMPRESTIMO_DUVIDA}
+    Verifica se os elementos estão visíveis e habilitados    ${EMPRESTIMO_SCREEN}    ${EMPRESTIMO_TEXT1}    ${EMPRESTIMO_TEXT2}    ${EMPRESTIMO_TEXT3}    ${EMPRESTIMO_TEXT5}    ${EMPRESTIMO_VOLTAR}    ${EMPRESTIMO_DUVIDA}
     Verifica texto de atributo do elemento    ${EMPRESTIMO_TEXT4}    content-desc    NOVO EMPRÉSTIMO
     Verifica texto de atributo do elemento    ${EMPRESTIMO_TEXT1}    content-desc    O valor disponível no momento é de R$ 10.000,00
     Verifica texto de atributo do elemento    ${EMPRESTIMO_TEXT2}    content-desc    Este valor pode mudar diariamente devido à nossa análise de crédito.

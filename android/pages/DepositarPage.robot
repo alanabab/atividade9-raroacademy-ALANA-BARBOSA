@@ -19,7 +19,7 @@ Então verifico as informações da função Depositar
     Verifica texto de atributo do elemento    ${DEPOSITAR_PIX}    content-desc    Pix\nSem custo e cai na hora, mesmo de madrugada e fim de semana.
     Verifica texto de atributo do elemento    ${DEPOSITAR_BOLETO}    content-desc    Boleto\nSem custo e pode levar 3 dias úteis para o dinheiro cair.
     Verifica texto de atributo do elemento    ${DEPOSITAR_TED_DOC}    content-desc    TED/DOC\nPode ter custo e cai somente em horário comercial de dias úteis.
-    Verifica texto de atributo do elemento    ${DEPOSITAR_EXIT}    content-desc     Trazer seu salário\nReceba todo mês direto aqui na sua conta, sem custo.
+    Verifica texto de atributo do elemento    ${DEPOSITAR_SALARIO}    content-desc     Trazer seu salário\nReceba todo mês direto aqui na sua conta, sem custo.
 
 E retorno da tela depositar para a tela inicial clicando em X
     Click Element    ${DEPOSITAR_EXIT}

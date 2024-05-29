@@ -46,4 +46,18 @@ C006 - Verificar função Empréstimos
     E clico na função Empréstimos
     Então verifico as informações da função Empréstimos
     E retorno da tela empréstimos para a tela inicial clicando em <
+    
+C007 - Verificar função Recarga de Celular
+    Dado que estou autenticado no App
+    Quando acesso a tela inicial do App 
+    E clico na função Recarga de celular
+    Então verifico as informações da função Recarga de Celular
+    E retorno da tela recarga de celular para a tela inicial clicando em <
+
+C008 - Verificar função Recarga de Celular digitando valor
+    Dado que estou autenticado no App
+    Quando acesso a tela inicial do App 
+    E clico na função Recarga de celular
+    Então verifico as informações da função Recarga de Celular
+    E retorno da tela recarga de celular para a tela inicial clicando em <
 
