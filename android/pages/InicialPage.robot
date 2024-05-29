@@ -24,7 +24,7 @@ ${LOANS}                            xpath=//android.widget.ScrollView/android.wi
 ${MOBILE_RECHARGE}                  xpath=//android.widget.ScrollView/android.widget.HorizontalScrollView[1]/android.widget.Button[2]
 ${DEMAND}                           xpath=//android.widget.ScrollView/android.widget.HorizontalScrollView[1]/android.widget.Button[3]
 ${DONATION}                         xpath=//android.widget.ScrollView/android.widget.HorizontalScrollView[1]/android.widget.Button[4]
-${ATALHOS}                      xpath=//android.widget.ScrollView/android.widget.HorizontalScrollView[1]/android.widget.Button[5]
+${ATALHOS}                          xpath=//android.widget.ScrollView/android.widget.HorizontalScrollView[1]/android.widget.Button[5]
 
 #MEUS CARTÕES
 ${MY_CARDS}                         xpath=//android.view.View[@content-desc="Meus cartões"]
@@ -66,35 +66,45 @@ Então verifico que o saldo foi escondido
 E clico no botão "mail"
     Click Element    ${MAIL_ICON}
 
+E clico no botão Conta
+    Click Element    ${USER_BALANCE}
+
 E clico na função Pix
+    Page Should Contain Text    Pix
     Espera o elemento e faz o clique    ${PIX}
 
 E clico na função Pagar
+    Page Should Contain Text    Pagar
     Espera o elemento e faz o clique    ${PAYMENT}
 
 E clico na função Transferir
+    Page Should Contain Text    Transferir
     Espera o elemento e faz o clique    ${TRANSFER}
     
 E clico na função Depositar
+    Page Should Contain Text    Depositar
     Espera o elemento e faz o clique    ${DEPOSIT}
 
 E clico na função Empréstimos
+    Page Should Contain Text    Empréstimos
     Espera o elemento e faz o clique    ${LOANS}
 
 E clico na função Recarga de celular
     Swipe By Percent    90    40    0    40
+    Page Should Contain Text    Recarga de celular
     Espera o elemento e faz o clique    ${MOBILE_RECHARGE}
 
 E clico na função Cobrar
     Swipe By Percent    90    40    0    40
+    Page Should Contain Text    Cobrar
     Espera o elemento e faz o clique    ${DEMAND}
     
 Então visualizo a função Doação
     Swipe By Percent    90    40    0    40
     Element Should Be Visible    ${DONATION}
-    Text Should Be Visible    Doação
+    Page Should Contain Text    Doação
         
 Então visualizo a função Encontrar atalhos
     Swipe By Percent    90    40    0    40
     Element Should Be Visible    ${ATALHOS}
-    Text Should Be Visible    Encontrar atalhos
+    Page Should Contain Text    Encontrar atalhos
