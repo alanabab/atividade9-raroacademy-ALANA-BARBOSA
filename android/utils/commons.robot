@@ -19,3 +19,20 @@ Verifica visibilidade e texto
     Element Should Be Visible    ${elemento}
     ${contentDesc}=    AppiumLibrary.Get Element Attribute    ${elemento}    content-desc 
     Should Contain    ${contentDesc}    ${nome}
+
+Verifica se os elementos estão visíveis
+    [Arguments]    @{elementos}
+    FOR    ${elemento}    IN    @{elementos}
+        Element Should Be Visible    ${elemento}
+    END
+
+Verifica se os elementos estão habilitados
+    [Arguments]    @{elementos}
+    FOR    ${elemento}    IN    @{elementos}
+        Element Should Be Enabled    ${elemento}
+    END
+
+Verifica se os elementos estão visíveis e habilitados
+    [Arguments]    @{elementos}
+    Verifica se os elementos estão visíveis @{elementos}
+    Verifica se os elementos estão habilitados @{elementos}

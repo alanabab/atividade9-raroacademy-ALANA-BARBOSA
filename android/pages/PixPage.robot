@@ -16,12 +16,8 @@ ${PIX_HELP}                    xpath=//android.view.View[@content-desc="Me ajuda
 *** Keywords ***
 Então verifico as informações da função Pix
     Wait Until Page Contains Element    ${PIX_SCREEN}
-    Element Should Be Enabled    ${PIX_PAYMENT}  
-    Element Should Be Enabled    ${PIX_TRANSFER}
-    Element Should Be Enabled    ${PIX_DEMAND}
-    Element Should Be Enabled    ${PIX_KEYS}
-    Element Should Be Enabled    ${PIX_LIMIT}
-    Element Should Be Enabled    ${PIX_HELP}
+    Verifica visibilidade e texto    ${PIX_SCREEN}    Minha área Pix Tudo o que você precisa para pagar, transferir ou cobrar. Pagar Transferir Cobrar
+    Verifica se os elementos estão visíveis e habilitados ${PIX_PAYMENT}    ${PIX_TRANSFER}    ${PIX_DEMAND}    ${PIX_KEYS}    ${PIX_LIMIT}    ${PIX_HELP}
 
 E retorno da tela pix para a tela inicial clicando em X
     Click Element    ${PIX_EXIT}

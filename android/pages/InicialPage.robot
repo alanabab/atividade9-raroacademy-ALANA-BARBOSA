@@ -78,7 +78,7 @@ E clico na função Transferir
 E clico na função Depositar
     Espera o elemento e faz o clique    ${DEPOSIT}
 
-E clico na função Empréstimo
+E clico na função Empréstimos
     Swipe By Percent    90    40    0    40
     Espera o elemento e faz o clique    ${LOANS}
 

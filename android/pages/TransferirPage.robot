@@ -9,3 +9,17 @@ ${TRANSFERIR_QRCODE}                xpath=//android.widget.EditText[@text="R$ 0,
 ${TRANSFERIR_EXIT}                  xpath=//android.widget.EditText[@text="R$ 0,00"]/android.view.View/android.widget.Button[1]
 
 *** Keywords ***
+Então verifico as informações da função Transferir
+    Wait Until Page Contains Element    ${TRANSFERIR_SCREEN}
+    Verifica se os elementos estão visíveis e habilitados    ${TRANSFERIR_SCREEN}    ${TRANSFERIR_QRCODE}    ${TRANSFERIR_EXIT}
+    Element Should Contain Text    ${TRANSFERIR_SCREEN}    Qual é o valor da transferência?\nSaldo disponível em conta R$ 181,79
+    Element Should Contain Text    ${TRANSFERIR_SCREEN}    R$ 0,00
+
+E retorno da tela transferir para a tela inicial clicando em X
+    Click Element    ${TRANSFERIR_EXIT}
+    Wait Until Element Is Visible    ${USER_NAME}
+    Element Should Be Visible    ${USER_NAME}
+
+E digito o valor a ser transferido
+    Input Text    ${TRANSFERIR_SCREEN}    3298
+    Wait Until Keyword Succeeds    1    1    Element Text Should Be    ${TRANSFERIR_SCREEN}    R$ 32,98

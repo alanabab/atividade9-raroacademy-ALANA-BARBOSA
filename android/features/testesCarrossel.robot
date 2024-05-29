@@ -18,3 +18,32 @@ C002 - Verificar função Pagar
     E clico na função Pagar
     Então verifico as informações da função Pagar
     E retorno da tela pagar para a tela inicial clicando em X
+
+C003 - Verificar função Transferir
+    Dado que estou autenticado no App
+    Quando acesso a tela inicial do App 
+    E clico na função Transferir
+    Então verifico as informações da função Transferir
+    E retorno da tela transferir para a tela inicial clicando em X
+
+C004 - Verificar função Transferir digitando valor
+    Dado que estou autenticado no App
+    Quando acesso a tela inicial do App 
+    E clico na função Transferir
+    Então verifico as informações da função Transferir
+    E digito o valor a ser transferido
+
+C005 - Verificar função Depositar
+    Dado que estou autenticado no App
+    Quando acesso a tela inicial do App 
+    E clico na função Depositar
+    Então verifico as informações da função Depositar
+    E retorno da tela depositar para a tela inicial clicando em X
+
+C006 - Verificar função Empréstimos
+    Dado que estou autenticado no App
+    Quando acesso a tela inicial do App 
+    E clico na função Empréstimos
+    Então verifico as informações da função Empréstimos
+    E retorno da tela empréstimos para a tela inicial clicando em <
+
