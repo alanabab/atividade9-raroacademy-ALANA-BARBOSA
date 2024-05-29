@@ -89,12 +89,12 @@ E clico na função Cobrar
     Swipe By Percent    90    40    0    40
     Espera o elemento e faz o clique    ${DEMAND}
     
-E visualizo a função Doação
+Então visualizo a função Doação
     Swipe By Percent    90    40    0    40
     Element Should Be Visible    ${DONATION}
     Text Should Be Visible    Doação
         
-E visualizo a função Encontrar atalhos
+Então visualizo a função Encontrar atalhos
     Swipe By Percent    90    40    0    40
     Element Should Be Visible    ${ATALHOS}
     Text Should Be Visible    Encontrar atalhos

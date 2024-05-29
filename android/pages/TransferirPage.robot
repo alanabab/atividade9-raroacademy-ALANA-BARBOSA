@@ -5,7 +5,7 @@ Resource    ../utils/commons.robot
 
 *** Variables ***
 ${TRANSFERIR_SCREEN}                xpath=//android.widget.EditText[@text="R$ 0,00"]
-${TRANSFERIR_INPUT}                xpath=//android.widget.EditText[@text="R$ 32,98"]
+${TRANSFERIR_EXPECT_INPUT}                xpath=//android.widget.EditText[@text="R$ 32,98"]
 ${TRANSFERIR_QRCODE}                xpath=//android.widget.EditText[@text="R$ 0,00"]/android.view.View/android.widget.Button[2]
 ${TRANSFERIR_EXIT}                  xpath=//android.widget.EditText[@text="R$ 0,00"]/android.view.View/android.widget.Button[1]
 
@@ -23,5 +23,5 @@ E retorno da tela transferir para a tela inicial clicando em X
 
 E digito o valor a ser transferido
     Input Text    ${TRANSFERIR_SCREEN}    3298
-    Wait Until Element Is Visible    ${TRANSFERIR_INPUT}
-    Element Should Contain Text    ${TRANSFERIR_INPUT}    R$ 32,98
+    Wait Until Element Is Visible    ${TRANSFERIR_EXPECT_INPUT}
+    Element Should Contain Text    ${TRANSFERIR_EXPECT_INPUT}    R$ 32,98

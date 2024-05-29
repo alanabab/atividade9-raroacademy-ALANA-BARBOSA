@@ -52,12 +52,37 @@ C007 - Verificar função Recarga de Celular
     Quando acesso a tela inicial do App 
     E clico na função Recarga de celular
     Então verifico as informações da função Recarga de Celular
-    E retorno da tela recarga de celular para a tela inicial clicando em <
+    E retorno da tela recarga de celular para a tela inicial clicando em X
 
 C008 - Verificar função Recarga de Celular digitando valor
     Dado que estou autenticado no App
     Quando acesso a tela inicial do App 
     E clico na função Recarga de celular
     Então verifico as informações da função Recarga de Celular
-    E retorno da tela recarga de celular para a tela inicial clicando em <
+    E digito o número do celular
+
+C009 - Verificar função Cobrar
+    Dado que estou autenticado no App
+    Quando acesso a tela inicial do App 
+    E clico na função Cobrar
+    Então verifico as informações da função Cobrar
+    E retorno da tela cobrar para a tela inicial clicando em X
+
+C010 - Verificar função Cobrar digitando valor
+    Dado que estou autenticado no App
+    Quando acesso a tela inicial do App 
+    E clico na função Cobrar
+    Então verifico as informações da função Cobrar
+    E digito o valor a ser recebido
+
+C011 - Verificar função Doação
+    Dado que estou autenticado no App
+    Quando acesso a tela inicial do App 
+    Então visualizo a função Doação
+
+C012 - Verificar função Encontrar atalhos
+    Dado que estou autenticado no App
+    Quando acesso a tela inicial do App 
+    Então visualizo a função Encontrar atalhos
+
 
