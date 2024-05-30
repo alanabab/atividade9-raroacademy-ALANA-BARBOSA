@@ -37,7 +37,7 @@ ${CREDITCARD}                       xpath=//android.view.View[@content-desc="Car
 ${LOAN_INFO}                        xpath=//android.view.View[@content-desc="Empréstimo\nValor disponível de até\nR$ 10.000,00"]
 ${INVESTMENT}                       xpath=//android.view.View[@content-desc="Investimentos\nA revolução roxa começou. Invista de maneira simples, sem burocracia e 100% digital."]
 ${LIFE_INSURANCE}                   xpath=//android.view.View[@content-desc="Seguro de vida\nConheça Nubank Vida: um seguro simples e que cabe no bolso."]
-${FIND_OUT_MORE_BAR}                xpath=//android.widget.HorizontalScrollView
+${FIND_OUT_MORE}                    xpath=//android.view.View[@content-desc="Descubra mais"]
 ${WHATSAPP}                         xpath=//android.view.View[@content-desc="WhatsApp\nNovo\nPagamentos seguros, rápidos e sem tarifa. A experiência Nubank sem nem sair da conversa."]
 ${REFER_FRIENDS}                    xpath=//android.view.View[@content-desc="Indique seus amigos\nMostre aos seus amigos como é fácil ter uma vida sem burocracia."]
 
@@ -108,3 +108,47 @@ Então visualizo a função Encontrar atalhos
     Swipe By Percent    90    40    0    40
     Element Should Be Visible    ${ATALHOS}
     Page Should Contain Text    Encontrar atalhos
+
+Então visualizo o botão Meus cartões
+    Verifica visibilidade e texto    ${MY_CARDS}    Meus cartões
+    Element Should Be Enabled    ${MY_CARDS}
+
+E clico na mensagem informando valor de empréstimo disponível
+    Verifica visibilidade e texto    ${LOAN_TEXT}    Você tem R$ 10.000,00 disponíveis para empréstimo.
+
+Então visualizo a mensagem de planos futuros
+    Swipe By Percent    80    70    20    70
+    Verifica visibilidade e texto    ${PLANS_TEXT}    Conquiste planos futuros: conheça as opções para guardar dinheiro.
+
+E clico no botão Cartão de Crédito
+    Verifica visibilidade e texto    ${CREDITCARD}    Cartão de Crédito\nFatura atual\nR$ 780,72\nLimite disponível R$ 806,78
+    Click Element    ${CREDITCARD}
+
+E clico em Empréstimo
+    Swipe By Percent    50    80    50    30
+    Wait Until Element Is Visible    ${LOAN_INFO}
+    Verifica visibilidade e texto    ${LOAN_INFO}    Empréstimo\nValor disponível de até\nR$ 10.000,00
+    Click Element    ${LOAN_INFO}
+
+E clico em Investimentos
+    Swipe By Percent    50    80    50    30
+    Wait Until Element Is Visible    ${INVESTMENT}
+    Verifica visibilidade e texto    ${INVESTMENT}    Investimentos\nA revolução roxa começou. Invista de maneira simples, sem burocracia e 100% digital.
+    Click Element    ${INVESTMENT}
+
+Então visualizo a mensagem de seguro de vida
+    Swipe By Percent    50    80    50    30
+    Wait Until Element Is Visible    ${LIFE_INSURANCE}
+    Verifica visibilidade e texto    ${LIFE_INSURANCE}    Seguro de vida\nConheça Nubank Vida: um seguro simples e que cabe no bolso.
+
+Então visualizo a mensagem WhatsApp
+    Swipe By Percent    50    80    50    30
+    Wait Until Element Is Visible    ${WHATSAPP}
+    Verifica visibilidade e texto    ${WHATSAPP}    WhatsApp\nNovo\nPagamentos seguros, rápidos e sem tarifa. A experiência Nubank sem nem sair da conversa.
+
+E clico em Indique seus amigos 
+    Swipe By Percent    50    80    50    30
+    Wait Until Element Is Visible    ${WHATSAPP}
+    Swipe By Percent    70    90    20    90
+    Verifica visibilidade e texto    ${REFER_FRIENDS}    Indique seus amigos\nMostre aos seus amigos como é fácil ter uma vida sem burocracia.
+    Click Element    ${REFER_FRIENDS}
