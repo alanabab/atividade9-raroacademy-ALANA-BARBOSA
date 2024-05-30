@@ -52,7 +52,7 @@ CT08 - Verificar Empréstimo
     E clico em Empréstimo
     Então verifico as informações da função Empréstimos
 
-CT09 - Verificar Empréstimo
+CT09 - Verificar Investimentos
     Dado que estou autenticado no App
     Quando acesso a tela inicial do App 
     E clico em Investimentos

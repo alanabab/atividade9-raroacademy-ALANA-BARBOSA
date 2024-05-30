@@ -115,6 +115,7 @@ Então visualizo o botão Meus cartões
 
 E clico na mensagem informando valor de empréstimo disponível
     Verifica visibilidade e texto    ${LOAN_TEXT}    Você tem R$ 10.000,00 disponíveis para empréstimo.
+    Click Element    ${LOAN_TEXT}
 
 Então visualizo a mensagem de planos futuros
     Swipe By Percent    80    70    20    70
@@ -142,12 +143,12 @@ Então visualizo a mensagem de seguro de vida
     Verifica visibilidade e texto    ${LIFE_INSURANCE}    Seguro de vida\nConheça Nubank Vida: um seguro simples e que cabe no bolso.
 
 Então visualizo a mensagem WhatsApp
-    Swipe By Percent    50    80    50    30
+    Swipe By Percent    50    80    50    10
     Wait Until Element Is Visible    ${WHATSAPP}
     Verifica visibilidade e texto    ${WHATSAPP}    WhatsApp\nNovo\nPagamentos seguros, rápidos e sem tarifa. A experiência Nubank sem nem sair da conversa.
 
 E clico em Indique seus amigos 
-    Swipe By Percent    50    80    50    30
+    Swipe By Percent    50    80    50    10
     Wait Until Element Is Visible    ${WHATSAPP}
     Swipe By Percent    70    90    20    90
     Verifica visibilidade e texto    ${REFER_FRIENDS}    Indique seus amigos\nMostre aos seus amigos como é fácil ter uma vida sem burocracia.

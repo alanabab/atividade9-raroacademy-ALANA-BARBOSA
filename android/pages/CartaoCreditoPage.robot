@@ -10,7 +10,7 @@ ${CREDITO_VALOR}                        xpath=//android.view.View[@content-desc=
 ${CREDITO_LIMITE}                       xpath=//android.view.View[@content-desc="Limite disponível R$ 806,78"]
 
 ${CREDITO_BARRA}                        xpath=//android.widget.HorizontalScrollView
-${PAGAR_FATURA}                         xpath=//android.view.View[@content-desc="Pagar fatura"]
+${CREDITO_PAGAR_FATURA}                         xpath=//android.view.View[@content-desc="Pagar fatura"]
 ${RESUMO_FATURA}                        xpath=//android.view.View[@content-desc="Resumo de faturas"]
 ${AJUSTAR_LIMITE}                       xpath=//android.view.View[@content-desc="Ajustar limites"]
 ${CARTAO_VIRTUAL}                       xpath=//android.view.View[@content-desc="Cartão virtual"]
@@ -24,12 +24,12 @@ ${CREDITO_VOLTAR}                       xpath=//android.widget.FrameLayout[@reso
 
 *** Keywords ***
 Então consigo visualizar a fatura atual
-    Wait Until Element Is Visible    ${CREDITO_SCREEN}
-    Verifica se os elementos estão visíveis e habilitados    ${CREDITO_SCREEN}    ${CREDITO_FATURA}    ${CREDITO_VALOR}    ${CREDITO_LIMITE}    ${CREDITO_BARRA}    ${PAGAR_FATURA}    ${RESUMO_FATURA}    ${AJUSTAR_LIMITE}    ${CARTAO_VIRTUAL}    ${CREDITO_DUVIDA}    ${CREDITO_LUPA}    ${CREDITO_VOLTAR}
+    Wait Until Element Is Visible    ${CREDITO_PAGAR_FATURA}
+    Verifica se os elementos estão visíveis e habilitados    ${CREDITO_FATURA}    ${CREDITO_VALOR}    ${CREDITO_LIMITE}    ${CREDITO_BARRA}    ${CREDITO_PAGAR_FATURA}    ${RESUMO_FATURA}    ${AJUSTAR_LIMITE}    ${CARTAO_VIRTUAL}    ${CREDITO_DUVIDA}    ${CREDITO_LUPA}    ${CREDITO_VOLTAR}
     Verifica texto de atributo do elemento    ${CREDITO_FATURA}    content-desc    Fatura atual
     Verifica texto de atributo do elemento    ${CREDITO_VALOR}    content-desc    R$ 780,72
     Verifica texto de atributo do elemento    ${CREDITO_LIMITE}    content-desc    Limite disponível R$ 806,78
-    Verifica texto de atributo do elemento    ${PAGAR_FATURA}    content-desc    Pagar fatura
+    Verifica texto de atributo do elemento    ${CREDITO_PAGAR_FATURA}    content-desc    Pagar fatura
     Verifica texto de atributo do elemento    ${RESUMO_FATURA}    content-desc    Resumo de faturas
     Verifica texto de atributo do elemento    ${AJUSTAR_LIMITE}    content-desc    Ajustar limites
     Verifica texto de atributo do elemento    ${CARTAO_VIRTUAL}    content-desc    Cartão virtual
